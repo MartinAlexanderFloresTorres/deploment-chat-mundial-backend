@@ -7,9 +7,11 @@ import { PORT } from "./config.js";
 
 const app = express();
 const server = http.createServer(app);
+
+//=============== Permitir coneciones de este frontend ===============//
 const io = new Server(server, {
   cors: {
-    origin: "https://chat-mundial.netlify.app",
+    origin: "http://localhost:3000",
   },
 });
 
